@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Feed Blocker",
+  "version": "1.0",
+  "description": "Makes Reddit feeds (all, popular, home, subreddits) unreadable while allowing individual post viewing.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "css": ["blocker.css"],
+      "js": ["blocker.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
