@@ -1,0 +1,21 @@
+/*
+ * Reddit Feed Blocker
+ *
+ * Hides body content immediately to prevent flash of feed before JS runs.
+ * JS overlay handles the actual replacement message.
+ */
+
+/* Hide body content by default to prevent feed flash */
+body {
+  visibility: hidden !important;
+}
+
+/* Restore on post pages (JS adds this class) */
+html.rfb-post-page body {
+  visibility: visible !important;
+}
+
+/* The overlay itself should always be visible */
+#rfb-overlay {
+  visibility: visible !important;
+}
